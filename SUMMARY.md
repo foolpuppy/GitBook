@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Ea](README.md)
+* [Pages](README.md)
 
 ## Java
 
