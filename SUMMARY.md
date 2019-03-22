@@ -1,4 +1,5 @@
 # Table of contents
 
-* [book](README.md)
+* [Ch 01](README.md)
+* [Ch 02](ch-02.md)
 
