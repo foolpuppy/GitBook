@@ -1,7 +1,3 @@
----
-description: IDEA 配置 Git
----
-
 # IDEA&Git Configuration
 
 ### IDEA配置VC之Git
