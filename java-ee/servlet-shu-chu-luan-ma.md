@@ -16,5 +16,5 @@ Servlet 中 out.print，输出到网页乱码，首先看自己浏览器的网�
 response.setContentType("text/html;charset=utf-8");
 ```
 
-
+## 最后我用过滤器结合 response.setContentType\(MIME\) 实现全站编码统一
 

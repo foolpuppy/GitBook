@@ -2,7 +2,7 @@
 description: 从注册开始
 ---
 
-# Start
+# Git-Pages
 
 ### 当然是不可能从注册开始的啦,自己去GitHub注册一个帐号。
 
