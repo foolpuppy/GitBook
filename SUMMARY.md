@@ -7,6 +7,7 @@
 ## IDEA
 
 * [IDEA&Git Configuration](idea/idea-and-git-configuration.md)
+* [Maven接入阿里云仓库](idea/maven-jie-rueli-yun-cang-ku.md)
 
 ## Git Pages
 
