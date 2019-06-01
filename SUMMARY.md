@@ -22,4 +22,5 @@
 ## Tips
 
 * [Sublime Text3 添加到右键菜单](tips/sublime-text3-tian-jia-dao-you-jian-cai-dan.md)
+* [GCP](tips/gcp.md)
 
