@@ -41,18 +41,50 @@ sudo vim /etc/ss-conf.json
 }
 #以该配置文件启动SS
 sudo ssserver -c /etc/ss-conf.json -d start
+sudo ssserver -c /etc/ss-conf.json -d restart
 ```
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
+## 3、设置SS自启动
 
-Once you're strong enough, save the world:
-
+```text
+#创建自启动脚本
+sudo vim /etc/init.d/shadowsocks
+#内容
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          shadowsocks
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: start shadowsocks
+# Description:       start shadowsocks
+### END INIT INFO
+start(){
+        ssserver -c /etc/ss-conf.json -d start
+}
+stop(){
+        ssserver -c /etc/ss-conf.json -d stop
+}
+case "$1" in
+start)
+        start
+        ;;
+stop)
+        stop
+        ;;
+reload)
+        stop
+        start
+        ;;
+*)
+        echo "Usage: $0 {start|reload|stop}"
+        exit 1
+        ;;
+esac
+#修改可执行权限
+sudo chmod +x /etc/init.d/shadowsocks
+#执行
+sudo update-rc.d shadowsocks defaults
 ```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-
-
 
